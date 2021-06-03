@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="snimi fotografiju"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tw_geo_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="geografska dužina: "
+        app:layout_constraintTop_toBottomOf="@+id/btnPhoto"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tw_geo_lat_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhoto"
+        app:layout_constraintLeft_toRightOf="@+id/tw_geo_lat"
+        />
+
+    <TextView
+        android:id="@+id/tw_geo_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="geografska širina: "
+        app:layout_constraintTop_toBottomOf="@+id/tw_geo_lat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tw_geo_lon_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data"
+        app:layout_constraintTop_toBottomOf="@+id/tw_geo_lat"
+        app:layout_constraintLeft_toRightOf="@+id/tw_geo_lon"
+        />
+
+    <TextView
+        android:id="@+id/tw_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="država: "
+        app:layout_constraintTop_toBottomOf="@+id/tw_geo_lon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tw_country_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data"
+        app:layout_constraintTop_toBottomOf="@+id/tw_geo_lon"
+        app:layout_constraintLeft_toRightOf="@+id/tw_country"
+        />
+
+    <TextView
+        android:id="@+id/tw_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mjesto: "
+        app:layout_constraintTop_toBottomOf="@+id/tw_country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tw_city_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data"
+        app:layout_constraintTop_toBottomOf="@+id/tw_country"
+        app:layout_constraintLeft_toRightOf="@+id/tw_city"
+        />
+
+    <TextView
+        android:id="@+id/tw_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adresa: "
+        app:layout_constraintTop_toBottomOf="@+id/tw_city"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/tw_adress_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data"
+        app:layout_constraintTop_toBottomOf="@+id/tw_city"
+        app:layout_constraintLeft_toRightOf="@+id/tw_adress"
+        />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tw_adress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:context=".activities.MainActivity" />
+</androidx.constraintlayout.widget.ConstraintLayout>
